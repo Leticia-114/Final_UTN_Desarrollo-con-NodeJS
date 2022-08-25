@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb://localhost/DN2022LP",
+  "mongodb://db/DN2022LP",
   { useNewUrlParser: true },
   function (error) {
     if (error) {

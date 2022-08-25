@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web:
+      container_name: ECommerce-API
+      restart: always
+      build: .
+      ports: 
+        - "8080:3000"
+      links:
+        - db
+
+  db:
+      container_name: mongo_db
+      image: mongo
+      ports:
+        - "5000:27017"
+      volumes:
+        - mongodb:/app     
+
+volumes:
+  mongodb:
